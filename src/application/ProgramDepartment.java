@@ -12,9 +12,8 @@ public class ProgramDepartment {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		
-		DepartmentDao departmentDao = DaoFactory.createDeparmentDao();
 
+		DepartmentDao departmentDao = DaoFactory.createDeparmentDao();
 
 		System.out.println("--- Test 01: Department FindById ---");
 		Department dep = departmentDao.findById(1);
@@ -23,18 +22,21 @@ public class ProgramDepartment {
 		System.out.println();
 		System.out.println("--- Test 02: Seller FindAll ---");
 		List<Department> list = departmentDao.findAll();
-		for(Department obj: list) {
+		for (Department obj : list) {
 			System.out.println(obj);
 		}
 		System.out.println();
 		System.out.println("--- Test 03: Seller insert ---");
-		
+		Department newDep = new Department(null, "Music");
+		departmentDao.insert(newDep);
+		System.out.println("Inserted! Department new Id: " + newDep.getId());
+
 		System.out.println();
 		System.out.println("--- Test 04: Seller update ---");
-		
+
 		System.out.println();
 		System.out.println("--- Test 05: Seller delete ---");
-		
+
 		sc.close();
 	}
 
