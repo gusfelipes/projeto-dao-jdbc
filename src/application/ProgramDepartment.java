@@ -40,6 +40,8 @@ public class ProgramDepartment {
 
 		System.out.println();
 		System.out.println("--- Test 05: Seller delete ---");
+		departmentDao.deleteById(10);
+		System.out.println("Deleted completed!");
 
 		sc.close();
 	}
