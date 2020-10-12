@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -21,7 +22,10 @@ public class ProgramDepartment {
 
 		System.out.println();
 		System.out.println("--- Test 02: Seller FindAll ---");
-
+		List<Department> list = departmentDao.findAll();
+		for(Department obj: list) {
+			System.out.println(obj);
+		}
 		System.out.println();
 		System.out.println("--- Test 03: Seller insert ---");
 		
