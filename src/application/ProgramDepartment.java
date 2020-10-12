@@ -33,6 +33,10 @@ public class ProgramDepartment {
 
 		System.out.println();
 		System.out.println("--- Test 04: Seller update ---");
+		Department depUpdate =departmentDao.findById(1);
+		depUpdate.setName("Food");
+		departmentDao.update(depUpdate);
+		System.out.println("Update completed!");
 
 		System.out.println();
 		System.out.println("--- Test 05: Seller delete ---");
