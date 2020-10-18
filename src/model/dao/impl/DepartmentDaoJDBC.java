@@ -122,7 +122,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		ResultSet rs = null;
 
 		try {
-			st = conn.prepareStatement("SELECT * FROM department");
+			st = conn.prepareStatement("SELECT * FROM department ORDER BY Name");
 
 			rs = st.executeQuery();
 
